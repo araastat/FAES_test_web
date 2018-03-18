@@ -1,0 +1,19 @@
+---
+title: "Bioinformatics and Data Science"
+author: "Abhijit Dasgupta, Antej Nahunovic and Martin Skarzynski, Co-Chairs"
+output: html_document
+---
+
+## What is Bioinformatics?
+
+Precipitated by the immensity and explosion of publicly available genomic information, the field of bioinformatics has emerged as an important and dynamic interdisciplinary  eld in biomedical studies. Bioinformatics develops and applies computer technology as well as informatics, including mathematics and statistics, to store, analyze, interpret, and manage vast amounts of biological data. 
+
+## What is Data Science?
+
+Data Science is a interdisciplinary field encompassing statistics, computer science, applied mathematics, software engineering and information technology that involves the collection, management, and algorithmic analyses of data, often resulting in insightful reporting and visualizations that answer questions asked of the data. In biomedical research, data scientific methods help organize data corpuses including clinical, molecular and "omics" data,  and analyze them with the goals of understanding biological  and clinical phenomena, finding factors that can influence outcomes, and creating predictive 
+models that can estimate disease risk. Data Science is the toolbox that allows us to understand and interpret natural phenomena from data. 
+
+## The department
+
+The Department of Bioinformatics and Data Science provides a catalog of courses to allow the NIH community and general public to learn  data analyses and predictive algorithms using computer programs, bioinformatics using genetic, proteomic and other molecular data, and fundamental statistical and epidemiologic concepts.
+

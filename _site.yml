@@ -1,0 +1,16 @@
+name: BIOF
+output_dir: '.'
+navbar:
+  title: Bioinformatics and Data Science
+  left:
+  - text: Home
+    href: index.html
+  - text: Courses
+    href: courses.html
+  - text: Faculty
+    href: faculty.html
+output:
+  html_document:
+    theme: cerulean
+    highlight: textmate
+    css: styles.css
