@@ -9,6 +9,8 @@ navbar:
     href: courses.html
   - text: Faculty
     href: faculty.html
+  - text: Resources
+    href: resources.html
 output:
   html_document:
     theme: cerulean

@@ -1,0 +1,6 @@
+---
+title: "Resources for bioinformatics and data science"
+author: "BIOF"
+output: html_document
+---
+
