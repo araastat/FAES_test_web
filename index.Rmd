@@ -1,6 +1,6 @@
 ---
 title: "Bioinformatics and Data Science"
-author: "Abhijit Dasgupta, Antej Nahunovic and Martin Skarzynski, Co-Chairs"
+author: "Abhijit Dasgupta, Antej Nuhanovic and Martin Skarzynski, Co-Chairs"
 output: html_document
 ---
 
