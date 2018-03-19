@@ -6,7 +6,7 @@ output: html_document
 
 ## What is Bioinformatics?
 
-Precipitated by the immensity and explosion of publicly available genomic information, the field of bioinformatics has emerged as an important and dynamic interdisciplinary  eld in biomedical studies. Bioinformatics develops and applies computer technology as well as informatics, including mathematics and statistics, to store, analyze, interpret, and manage vast amounts of biological data. 
+Precipitated by the immensity and explosion of publicly available genomic information, the field of bioinformatics has emerged as an important and dynamic interdisciplinary  field in biomedical studies. Bioinformatics develops and applies computer technology as well as informatics, including mathematics and statistics, to store, analyze, interpret, and manage vast amounts of biological data. 
 
 ## What is Data Science?
 
