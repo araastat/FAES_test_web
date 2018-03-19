@@ -1,4 +1,4 @@
-BIOF309 | Introduction to Python
+[BIOF309](https://github.com/marskar/biof309_spring2018) | Introduction to Python
 BIOF395 | Introduction to Text Mining
 BIOF450 | Computational Biology and Evolutionary Genomics
 BIOF475 | Introduction to New Technologies in Data Science
