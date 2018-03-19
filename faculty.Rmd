@@ -1,22 +1,26 @@
 ---
 title: "Faculty"
 ---
-+ Buehler, Eugen, Ph.D., University of Pennsylvania; Informatics Group Leader, National Center for Advancing Translational Sciences, National Institutes of Health. 301-217-2337. email: ebuehler@mac.com
-+ Busby, Benjamin, Ph.D., University of Maryland at Baltimore; Genomics Outreach Coordinator. National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health. email: ben.busby@gmail.com
-+ Chang, Joshua C., Ph.D., University of California, Los Angeles; Postdoctoral Fellow, Clinical Center, Rehabilitation Medicine Department, National Institutes of Health. 424-442-9206. email: joshchang@ucla.edu
-+ Chen, Lanhao, M.Sc., George Washington University, Associate Data Mining Specialist, CSRA, Inc. 301-503-5765. email: gwchen@gwu.edu
-+ Dasgupta, Abhijit, Ph.D., University of Washington, Seattle; Director and Chief Data Scientist, ARAASTAT. 240-813-8458. email: adasgupta@araastat.com
-+ Goncearenco, Alexandr, Ph.D., University of Bergen, Norway; Research Fellow, National Center for Biotechnology Information, National Institutes of Health. 301-496-2936. email: gonceare@ncbi.nlm.nih.gov
-+ Hirsch, Robert, Ph.D., Kansas State University, EMT, University of Missouri. President, Stat-Aid Consulting. 913-660-3154. email: rphirsch@stat-aid.com
-+ Ko, Kyung Dae, Ph.D., Pennsylvania State University; Research Fellow, National Institute of Arthritis and Musculoskeletal and Skin Diseases, National Institutes of Health. 301-402-5072. email: kyungdae.ko@nih.gov
-+ Mamoutkine, Andrei, M.Sc., Novosibirsk State University, Russia; Senior Engineer at ADNET Systems, Inc. 301-742-9094, email: mamoutkine@gmail.com
-+ Nuhanovic, Antej, M.S., George Mason University; Bioinformatician. email: antejn@gmail.com
-+ Pons, Lena, M.S., Loyola University Maryland; Computational Linguist, Of ce of the Director, National Institutes of Health. 410- 585-4275. email: leanbethpons@gmail.com
-+ Rogozin, Igor, Ph.D., Novosibirsk State University, Russia; Staff Scientist, National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health; Adjunct Lecturer, Johns Hopkins University; 301-594-4271. email: ibrogozin@gmail.com
-+ Rosenberg, Yves, M.D., University of Lyon, France, M.P.H., Johns Hopkins University; Chief, Atherothrombosis and Coronary Artery Disease Branch, Division of Cardiovascular Sciences, National Heart, Lung and Blood Institute, National Institutes of Health. 301-435-1292. email: rosenbey@nih.gov
-+ Shah, Deven, Ph.D., University of New York at Buffalo; Vice President, Asclepius Solutions, Inc. 301-685-3557. email: deven.
-shah@asclepius.net
-+ Skarzynski, Martin, Ph.D., Georgetown University; Cancer Prevention Fellow, National Cancer Institute, National Institutes of Health. Phone: 240-595-3460 email: marskar@gmail.com
-+ Street, Jonathan, Ph.D., University of Edinburgh, United Kingdom; Postdoctoral Fellow, National Institute of Diabetes and Digestive and Kidney Diseases, National Institutes of Health. 202-340-1249. email: jonathan.street@nih.gov
-+ Tatusova, Tatiana, Ph.D., Moscow State University, Russia; Senior Scientist, National Center for Biotechnology Information, National Library of Medicine, National Institutes of Health. email: tmamikon@gmail.com
-+ Yun, Sijung, Ph.D., Boston University; Founder and CEO of Yotta Biomed, LLC.; Contractor to National Institute of Diabetes and Digestive and Kidney Diseases Genomics Core. 301-594-9864 email: sijungyun@yottabiomed.com
+
+```{r, echo = FALSE, warning=F, message=F}
+library(DT)
+library(tidyverse)
+library(glue)
+dat <- readLines('data/faculty.txt')
+dat_df <- data.frame(Faculty = dat)
+
+email_regex <- '[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+'
+phone_regex <- '\\d{3}-\\d{3}-\\d{4}'
+dat_df <- dat_df %>% 
+  mutate(email = str_extract(Faculty, email_regex)) %>% 
+  mutate(Phone = str_extract(Faculty, phone_regex)) %>% 
+  mutate(Email = glue_data(., '<a href="mailto:{email}">{email}</a>')) %>% 
+  mutate(Faculty = str_replace(Faculty, paste0('email: ',email_regex), '')) %>% 
+  mutate(Faculty = str_replace(Faculty, paste0(phone_regex,'.'), '')) %>% 
+  select(-email) %>% 
+  arrange(Faculty)
+datatable(dat_df, 
+          options = list(pageLength = 20, autoWidth = TRUE, 
+                         columnDefs = list(list(width = '100px', targets = 1))), 
+          escape = FALSE, rownames = FALSE)
+```
