@@ -1,0 +1,14 @@
+BIOF309 | Introduction to Python
+BIOF312 | Introduction to Perl
+BIOF339 | Practical R
+BIOF501 | Introduction to R: Step-by-Step Guide (7 weeks)
+BIOF509 | Machine Learning and Object-Oriented Programming with Python
+BIOF518 | Theoretical and Applied Bioinformatics
+BIOF525 | Computational Approaches to Metagenomics (8 weeks)
+MATH127 | Elementary Calculus I
+MATH215 | Introduction to Linear Algebra With Applications in Statistics
+STAT200 | Experimental Statistics I
+STAT317 | Introduction to Epidemiology (Online)
+STAT321 | Methodology in Clinical Trials
+STAT500 | Statistics for Biomedical Scientists I
+STAT500 II - O | Statistics for Biomedical Scientists II (Online)
